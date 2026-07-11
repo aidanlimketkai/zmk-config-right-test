@@ -63,5 +63,47 @@
         display-name = "Default Layout";
         kscan = <&kscan>; // Label of the kscan node, optional if all layouts use the same
         transform = <&default_transform>; // Label of the matrix transform for this layout
+
+        // Key positions below mirror the 6 (inner/index/middle/ring/pinky/outer)
+        // x 5 (num/top/home/bottom/mod) matrix from ergogen.yaml, offset per
+        // column to reflect each column's `stagger` value. Order matches the
+        // RC() order in default_transform / the keymap bindings.
+        //                          w    h    x    y    rot   rx   ry
+        keys
+            = <&key_physical_attrs 100 100    0   30     0     0     0>  // num  - inner
+            , <&key_physical_attrs 100 100  100   40     0     0     0>  // num  - index
+            , <&key_physical_attrs 100 100  200    0     0     0     0>  // num  - middle
+            , <&key_physical_attrs 100 100  300    0     0     0     0>  // num  - ring
+            , <&key_physical_attrs 100 100  400   10     0     0     0>  // num  - pinky
+            , <&key_physical_attrs 100 100  500   20     0     0     0>  // num  - outer
+
+            , <&key_physical_attrs 100 100    0  130     0     0     0>  // top  - inner
+            , <&key_physical_attrs 100 100  100  140     0     0     0>  // top  - index
+            , <&key_physical_attrs 100 100  200  100     0     0     0>  // top  - middle
+            , <&key_physical_attrs 100 100  300  100     0     0     0>  // top  - ring
+            , <&key_physical_attrs 100 100  400  110     0     0     0>  // top  - pinky
+            , <&key_physical_attrs 100 100  500  120     0     0     0>  // top  - outer
+
+            , <&key_physical_attrs 100 100    0  230     0     0     0>  // home - inner
+            , <&key_physical_attrs 100 100  100  240     0     0     0>  // home - index
+            , <&key_physical_attrs 100 100  200  200     0     0     0>  // home - middle
+            , <&key_physical_attrs 100 100  300  200     0     0     0>  // home - ring
+            , <&key_physical_attrs 100 100  400  210     0     0     0>  // home - pinky
+            , <&key_physical_attrs 100 100  500  220     0     0     0>  // home - outer
+
+            , <&key_physical_attrs 100 100    0  330     0     0     0>  // bottom - inner
+            , <&key_physical_attrs 100 100  100  340     0     0     0>  // bottom - index
+            , <&key_physical_attrs 100 100  200  300     0     0     0>  // bottom - middle
+            , <&key_physical_attrs 100 100  300  300     0     0     0>  // bottom - ring
+            , <&key_physical_attrs 100 100  400  310     0     0     0>  // bottom - pinky
+            , <&key_physical_attrs 100 100  500  320     0     0     0>  // bottom - outer
+
+            , <&key_physical_attrs 100 100    0  430     0     0     0>  // mod - inner
+            , <&key_physical_attrs 100 100  100  440     0     0     0>  // mod - index
+            , <&key_physical_attrs 100 100  200  400     0     0     0>  // mod - middle
+            , <&key_physical_attrs 100 100  300  400     0     0     0>  // mod - ring
+            , <&key_physical_attrs 100 100  400  410     0     0     0>  // mod - pinky
+            , <&key_physical_attrs 100 100  500  420     0     0     0>  // mod - outer
+            ;
     };
 };

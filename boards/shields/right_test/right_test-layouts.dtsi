@@ -1,23 +1,10 @@
 // See https://zmk.dev/docs/development/hardware-integration/physical-layouts
 // for how to configure this.
+//
+// NOTE: The actual physical layout used by this shield is defined directly
+// in right_test.overlay as `physical_layout0`, since that is what the
+// `chosen { zmk,physical-layout = ...; }` node points at. This file just
+// pulls in the `key_physical_attrs` macro used to build that layout's
+// `keys` property.
 
 #include <physical_layouts.dtsi>
-
-/ {
-    default_layout: default_layout {
-        compatible = "zmk,physical-layout";
-        display-name = "Default Layout";
-        transform = <&default_transform>;
-        kscan = <&kscan>;
-
-        // Edit this to define the positions and sizes of the keys, or remove it
-        // if your keyboard will not support ZMK Studio.
-        // https://zmk.dev/docs/development/hardware-integration/physical-layouts#optional-keys-property
-        keys  //                     w   h    x    y     rot    rx    ry
-            = <&key_physical_attrs 100 100    0    0       0     0     0>
-            , <&key_physical_attrs 100 100  100    0       0     0     0>
-            , <&key_physical_attrs 100 100    0  100       0     0     0>
-            , <&key_physical_attrs 100 100  100  100       0     0     0>
-            ;
-    };
-};
