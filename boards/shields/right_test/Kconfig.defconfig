@@ -1,0 +1,6 @@
+if SHIELD_RIGHT_TEST
+
+config ZMK_KEYBOARD_NAME
+    default "right_test"
+
+endif # SHIELD_RIGHT_TEST
